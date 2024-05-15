@@ -9,29 +9,53 @@ Features:
 
 Class and Method Descriptions
 - HealthTrackerGUI:
+  
 Description: This class represents the main graphical user interface (GUI) for the Health Tracker application. It sets up the main window and manages different panels for functionalities such as login, registration, activity tracking, summary view, and data reset.
+
 Methods:
+
 loginPanel(): Creates and returns a panel for user login.
+
 registerPanel(): Creates and returns a panel for user registration.
+
 activityPanel(): Creates and returns a panel for logging various health activities.
+
 resetPanel(): Creates and returns a panel for resetting user data.
+
 summaryPanel(): Creates and returns a panel for viewing summaries of logged activities.
+
 fetchUserSpecificData(String category, User user): Fetches data specific to a user and category from the database.
+
 generateTableName(String category, User user): Generates the name of the database table based on the category and user information.
+
 initializeComponents(): Initializes all components and panels within the JFrame.
-User:
+
+- User:
+
 Description: This class represents a user of the Health Tracker application. It encapsulates user data and provides methods for user authentication and registration.
 register(String username, String password, String name, int age, char gender, double weight, double height, DatabaseHelper dbHelper): Registers a new user with the provided details.
+
 authenticate(String username, String password, DatabaseHelper dbHelper): Authenticates a user with the provided username and password.
+
 - DatabaseHelper:
+
 Description: This class provides helper methods for interacting with the database. It handles database connections, queries, and data manipulation operations.
+
 Methods:
+
 validateUser(String username, String password): Validates a user's credentials by querying the database.
 resetUserData(User user): Resets the data associated with a user by deleting their records from the database.
+
 Methods:
+
 validateRegistrationInput(String username, String password, String name, String ageString, String weightString, String heightString):
+
 Description: Validates the input provided during user registration to ensure that it meets certain criteria such as non-empty fields, valid numeric values for age, weight, and height, and alphabetic characters for the name.
+
 fetchUserSpecificData(String category, User user):
+
 Description: Fetches data specific to a user and category from the database. It dynamically generates the table name based on the category and user information and executes a SQL query to retrieve the data.
+
 generateTableName(String category, User user):
+
 Description: Generates the name of the database table based on the category and user information. It follows a specific naming convention to ensure that each user's data is stored in a separate table.
