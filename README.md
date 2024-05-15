@@ -59,3 +59,50 @@ Description: Fetches data specific to a user and category from the database. It 
 generateTableName(String category, User user):
 
 Description: Generates the name of the database table based on the category and user information. It follows a specific naming convention to ensure that each user's data is stored in a separate table.
+
+- YouTubeApiService
+
+Description: Provides functionality to search for exercise videos on YouTube using the YouTube Data API.
+
+Methods:
+
+searchExerciseVideos(queryTerm): Searches for exercise videos on YouTube based on the provided query term and prints the URLs of the top 5 search results.
+
+- DatabaseException
+
+Description: Represents an exception thrown when there is a problem accessing the database.
+
+- InvalidNumericValueException
+
+Description: Represents an exception thrown when an invalid numeric value is encountered.
+
+- InvalidTextValueException
+
+Description: Represents an exception thrown when an invalid text value is encountered.
+
+-UserAlreadyExistsException
+
+Description: Represents an exception thrown when attempting to add a user that already exists in the database.
+
+- DietActivity
+
+Description: Represents a diet-related activity for tracking food consumption.
+
+- ExerciseActivity
+
+Description: Represents an exercise-related activity for tracking physical exercises.
+
+- FitnessActivity
+
+Description: Represents a generic fitness activity.
+
+- MentalHealthActivity
+
+Description: Represents a mental health-related activity for tracking emotions and sleep duration.
+
+- StepActivity
+
+Description: Represents a step-related activity for tracking daily steps.
+- WaterIntakeActivity
+
+Description: Represents a water intake-related activity for tracking daily water consumption.
